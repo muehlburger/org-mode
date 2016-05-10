@@ -51,11 +51,11 @@
 (if gnulinux-p
    (progn
     (setq org-capture-templates
-     '(("t" "Aufgabe" entry (file+headline "~/Dropbox/notes/gtd.org" "Inbox")
+     '(("t" "Aufgabe" entry (file+headline "/media/sf_notes/gtd.org" "Inbox")
           "* TODO %?")
-       ("z" "Zeiteintrag in gtd.org" entry (file+headline "~/Dropbox/notes/gtd.org" "Inbox")
+       ("z" "Zeiteintrag in gtd.org" entry (file+headline "/media/sf_notes/gtd.org" "Inbox")
           "* ZKTO %? \n  %i" :clock-in t :clock-resume t)
-       ("j" "Journal" entry (file+datetree "~/Dropbox/notes/journal.org")
+       ("j" "Journal" entry (file+datetree "/media/sf_notes/journal.org")
           "* %?\nEntered on %U\n  %i")))))
 (if mswindows-p
    (progn
@@ -139,8 +139,8 @@
 (if gnulinux-p
   (progn
    (setq org-agenda-files (quote 
-    ("~/Dropbox/notes/gtd.org"
-    "~/Dropbox/notes/")))))
+    ("/media/sf_notes/gtd.org"
+    "/media/sf_notes/")))))
 
 (if mswindows-p
  (progn
