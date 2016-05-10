@@ -14,7 +14,7 @@
 
 (if gnulinux-p
     (progn
-      (find-file "~/Dropbox/notes/gtd.org")))
+      (find-file "/media/sf_notes/gtd.org")))
 
 (if mswindows-p
     (progn
