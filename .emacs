@@ -10,15 +10,15 @@
 
 (if macosx-p
     (progn
-      (find-file "~/Dropbox/notes/gtd.org")))
+      (find-file "~/Dropbox/org/gtd.org")))
 
 (if gnulinux-p
     (progn
-      (find-file "/media/sf_notes/gtd.org")))
+      (find-file "/media/sf_org/gtd.org")))
 
 (if mswindows-p
     (progn
-      (find-file "~/Dropbox/notes/gtd.org")))
+      (find-file "~/Dropbox/org/gtd.org")))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
@@ -42,20 +42,20 @@
 (if macosx-p
    (progn
     (setq org-capture-templates
-     '(("t" "Aufgabe" entry (file+headline "~/Dropbox/notes/gtd.org" "Inbox")
+     '(("t" "Aufgabe" entry (file+headline "~/Dropbox/org/gtd.org" "Inbox")
           "* TODO %?")
-       ("z" "Zeiteintrag in gtd.org" entry (file+headline "~/Dropbox/notes/gtd.org" "Inbox")
+       ("z" "Zeiteintrag in gtd.org" entry (file+headline "~/Dropbox/org/gtd.org" "Inbox")
           "* ZKTO %? \n  %i" :clock-in t :clock-resume t)
-       ("j" "Journal" entry (file+datetree "~/Dropbox/notes/journal.org")
+       ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
           "* %?\nEntered on %U\n  %i")))))
 (if gnulinux-p
    (progn
     (setq org-capture-templates
-     '(("t" "Aufgabe" entry (file+headline "/media/sf_notes/gtd.org" "Inbox")
+     '(("t" "Aufgabe" entry (file+headline "/media/sf_org/gtd.org" "Inbox")
           "* TODO %?")
-       ("z" "Zeiteintrag in gtd.org" entry (file+headline "/media/sf_notes/gtd.org" "Inbox")
+       ("z" "Zeiteintrag in gtd.org" entry (file+headline "/media/sf_org/gtd.org" "Inbox")
           "* ZKTO %? \n  %i" :clock-in t :clock-resume t)
-       ("j" "Journal" entry (file+datetree "/media/sf_notes/journal.org")
+       ("j" "Journal" entry (file+datetree "/media/sf_org/journal.org")
           "* %?\nEntered on %U\n  %i")))))
 (if mswindows-p
    (progn
@@ -133,14 +133,14 @@
 (if macosx-p
  (progn
   (setq org-agenda-files (quote 
-   ("~/Dropbox/notes/gtd.org"
-    "~/Dropbox/notes/")))))
+   ("~/Dropbox/org/gtd.org"
+    "~/Dropbox/org/notes/")))))
 
 (if gnulinux-p
   (progn
    (setq org-agenda-files (quote 
-    ("/media/sf_notes/gtd.org"
-    "/media/sf_notes/")))))
+    ("/media/sf_org/gtd.org"
+    "/media/sf_org/notes/")))))
 
 (if mswindows-p
  (progn
